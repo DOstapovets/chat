@@ -1,0 +1,263 @@
+*{
+    font-family: Arial;
+}
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(296deg, #4ab04a, rgba(255, 95, 28, 0.79), #b00fa5);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 50s ease infinite;
+    -moz-animation: AnimationName 50s ease infinite;
+    animation: AnimationName 50s ease infinite;
+}
+form > input {
+    display: block;
+}
+.smoke{
+    padding: 25px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 300px;
+    height:270px;
+    background: rgba(255,255,255,0.3);
+}
+header{
+    padding: 15px 35px;
+    background: rgba(0,0,0,0.3);
+    display: block;
+    color: whitesmoke;
+}
+#user-data{
+    display: inline-block;
+}
+#user-data>p{
+
+    margin: 0;
+    margin-top: -15px;
+    display: inline-block;
+    padding-bottom:10px;
+    vertical-align: middle;
+}
+.content{
+    box-shadow: #3d3535 3px 5px 10px;
+    background: ghostwhite;
+    margin: auto;
+    position: absolute;
+     left: 0; bottom: 0; right: 0;
+    width: 700px;
+    height: 90%;
+}
+#dialogs{
+    overflow: auto;
+    overflow-x: hidden;
+    height:calc(100% - 107px);
+    padding:10px;
+    background: white;
+}
+#dialogs>ul{
+    padding: 0;
+    list-style: none;
+}
+.message-meta {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    display: block;
+    color: grey;
+    content: "Author|Date";
+}
+.message{
+
+    padding: 5px 0;
+    white-space: pre-line;
+
+}
+.message>span{
+    border-radius: 25px;
+    border-bottom-left-radius:0;
+}
+.message[data-sender="me"]{
+    text-align: right;
+}
+.message[data-sender="me"]>span{
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:25px;
+
+}
+.message>span{
+    display: inline-block;
+    white-space: pre-line;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 20px;
+    background: rgb(255, 185, 80);
+
+}
+
+.new-ms{
+    top:0;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+#mess-txt{
+
+    box-sizing: border-box;
+    resize: none;
+    height: 76px;
+    width: 612px;
+    float: left;
+}
+.btn-send:hover {
+    -webkit-animation: send 4s ease reverse;
+    -moz-animation: send 4s ease reverse;
+    animation: send 4s ease reverse;
+}
+.btn-send {
+
+    border: 1px solid black;
+    padding: 28px 0;
+    width: 75px;
+    background: #9E9E9E;
+    float: left;
+    text-align: center;
+    color: white;
+}
+
+#user_list{
+    background: rgba(0,0,0,0.7);
+    width: 275px;
+    height: 300px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+#user_list > .header {
+    background: rgba(0,0,0,1);
+    color:white;
+    padding: 8px 7px;
+
+}
+#user_list >.list{
+    display: block;
+    color:white;
+}
+
+#user_list >.list > ul  {
+     list-style:url(user1.png);
+ }
+#user_list >.list > ul> li  {
+    display: block;
+    vertical-align:middle;
+    top:0;
+}
+.log-out{
+    float: right;
+    cursor: pointer;
+}
+.log-out>p{
+    margin-top: 6px;
+    cursor: pointer;
+}
+.container{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 300px;
+    height:270px;
+}
+.img-usr{
+
+    width: 150px;
+    border-radius:100%;
+}
+
+.btn-login{
+
+    box-sizing: border-box;
+    color: white;
+    background: darkgreen;
+    width: 50%;
+    padding: 7px;
+    border:none;
+    float: left;
+}
+.btn-reg{
+    box-sizing: border-box;
+    background: white;
+    width: 50%;
+    padding: 7px;
+    border:none;
+}
+.btn-reg:hover{
+    background:lightgrey;
+    border:none;
+}
+.btn-reg:active{
+    color: white;
+    background: darkkhaki;
+}
+.inpt-txt{
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    margin:  5px 0;
+    padding: 7px;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:7% 0%}
+    50%{background-position:94% 100%}
+    100%{background-position:7% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:7% 0%}
+    50%{background-position:94% 100%}
+    100%{background-position:7% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:7% 0%}
+    50%{background-position:94% 100%}
+    100%{background-position:7% 0%}
+}
+@-webkit-keyframes send {
+    0%{border-bottom: 0 solid orange;
+        padding-bottom: 0;}
+
+    50%{border-bottom: 10px solid orange;
+        padding-bottom: 18px;}
+    100%{border-bottom: 0 solid orange;
+        padding-bottom: 0;}
+}
+@-moz-keyframes send {
+    0%{border-bottom: 0 solid orange;
+        padding-bottom: 0;}
+    50%{border-bottom: 10px solid orange;
+        padding-bottom: 18px;}
+    100%{border-bottom: 0 solid orange;
+        padding-bottom: 0;}
+
+}
+@keyframes send {
+   0%{border-right: 0 solid orange;
+       margin-right: 0;
+   }
+   50%{
+       border-right: 12px solid orange;
+       margin-right: -12px;
+   }
+
+   100%{
+       border-right: 0 solid orange;
+       margin-right: 0;
+   }
+
+}
